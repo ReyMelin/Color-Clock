@@ -65,7 +65,7 @@ class ColorClockWatchFaceService : WatchFaceService() {
                 .firstOrNull { it.id.value == PALETTE_SETTING_ID }
             val selectedOption = paletteSetting?.let { currentStyle[it] }
             val paletteName = (selectedOption as? ListUserStyleSetting.ListOption)
-                ?.id?.value ?: ColorPalette.METALLIC.name
+                ?.id?.value?.decodeToString() ?: ColorPalette.METALLIC.name
             try {
                 ColorPalette.valueOf(paletteName)
             } catch (_: Exception) {

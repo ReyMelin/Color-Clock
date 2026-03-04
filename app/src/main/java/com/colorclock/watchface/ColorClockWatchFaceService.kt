@@ -68,11 +68,13 @@ class ColorClockWatchFaceService : WatchFaceService() {
             val paletteName: String = listOption?.id?.value
                 ?.let { bytes -> String(bytes) }
                 ?: ColorPalette.METALLIC.name
-            try {
+
+            val result: ColorPalette = try {
                 ColorPalette.valueOf(paletteName)
             } catch (_: Exception) {
                 ColorPalette.METALLIC
             }
+            result
         }
 
         val renderer = ColorClockRenderer(

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required for Wear OS watchface -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <!-- Declare that this is a watch face app -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <!-- Watch Face Service -->
+        <service
+            android:name=".ColorClockWatchFaceService"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/watchface_preview" />
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watchface" />
+
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.colorclock.watchface.CONFIG_COLOR_CLOCK" />
+        </service>
+
+        <!-- Palette Picker Configuration Activity (on-watch) -->
+        <activity
+            android:name=".PalettePickerActivity"
+            android:exported="true"
+            android:label="@string/palette_config_title"
+            android:theme="@android:style/Theme.DeviceDefault">
+
+            <intent-filter>
+                <action android:name="com.colorclock.watchface.CONFIG_COLOR_CLOCK" />
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

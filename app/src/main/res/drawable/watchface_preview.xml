@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Watchface preview image shown in the watch face picker.
+     This is a vector approximation – three concentric arc rings
+     with a dark background, using the Metallic palette colours. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="320dp"
+    android:viewportWidth="320"
+    android:viewportHeight="320">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M160,160m-160,0a160,160 0,1,1 320,0a160,160 0,1,1 -320,0" />
+
+    <!-- Hours ring (inner, copper) -->
+    <path
+        android:strokeColor="#B87333"
+        android:strokeWidth="20"
+        android:fillColor="#00000000"
+        android:pathData="M160,160m-55,0a55,55 0,1,1 110,0a55,55 0,1,1 -110,0"
+        android:trimPathEnd="0.35" />
+
+    <!-- Minutes ring (middle, gold) -->
+    <path
+        android:strokeColor="#CFB53B"
+        android:strokeWidth="20"
+        android:fillColor="#00000000"
+        android:pathData="M160,160m-85,0a85,85 0,1,1 170,0a85,85 0,1,1 -170,0"
+        android:trimPathEnd="0.58" />
+
+    <!-- Seconds ring (outer, silver) – thinner -->
+    <path
+        android:strokeColor="#C0C0C0"
+        android:strokeWidth="10"
+        android:fillColor="#00000000"
+        android:pathData="M160,160m-115,0a115,115 0,1,1 230,0a115,115 0,1,1 -230,0"
+        android:trimPathEnd="0.75" />
+
+    <!-- Center dot -->
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M160,160m-4,0a4,4 0,1,1 8,0a4,4 0,1,1 -8,0" />
+</vector>

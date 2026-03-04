@@ -2,13 +2,14 @@ package com.colorclock.watchface
 
 import android.graphics.*
 import android.view.SurfaceHolder
+import androidx.wear.watchface.CanvasType
 import androidx.wear.watchface.ComplicationSlotsManager
 import androidx.wear.watchface.Renderer
 import androidx.wear.watchface.WatchState
 import androidx.wear.watchface.style.CurrentUserStyleRepository
 import java.time.ZonedDateTime
-import kotlin.math.min
 import kotlin.math.cos
+import kotlin.math.min
 import kotlin.math.sin
 
 /**

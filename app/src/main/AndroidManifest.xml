@@ -35,24 +35,7 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/watchface" />
 
-            <meta-data
-                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
-                android:value="com.colorclock.watchface.CONFIG_COLOR_CLOCK" />
         </service>
-
-        <!-- Palette Picker Configuration Activity (on-watch) -->
-        <activity
-            android:name=".PalettePickerActivity"
-            android:exported="true"
-            android:label="@string/palette_config_title"
-            android:theme="@android:style/Theme.DeviceDefault">
-
-            <intent-filter>
-                <action android:name="com.colorclock.watchface.CONFIG_COLOR_CLOCK" />
-                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
     </application>
 

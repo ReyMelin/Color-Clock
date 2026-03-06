@@ -24,16 +24,17 @@ class ColorClockWatchFaceService : WatchFaceService() {
 
     override fun createUserStyleSchema(): UserStyleSchema {
         val options = ColorPalette.entries.map { palette ->
+            val displayName = resources.getString(when (palette) {
+                ColorPalette.METALLIC -> R.string.palette_metallic
+                ColorPalette.WINTER   -> R.string.palette_winter
+                ColorPalette.SPACE    -> R.string.palette_space
+                ColorPalette.AUTUMN   -> R.string.palette_autumn
+                ColorPalette.DARK     -> R.string.palette_dark
+            })
             ListUserStyleSetting.ListOption(
                 UserStyleSetting.Option.Id(palette.name),
-                resources,
-                when (palette) {
-                    ColorPalette.METALLIC -> R.string.palette_metallic
-                    ColorPalette.WINTER   -> R.string.palette_winter
-                    ColorPalette.SPACE    -> R.string.palette_space
-                    ColorPalette.AUTUMN   -> R.string.palette_autumn
-                    ColorPalette.DARK     -> R.string.palette_dark
-                },
+                displayName,
+                displayName,
                 null  // no icon
             )
         }

@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Color Clock</string>
-    <string name="palette_config_title">Color Palette</string>
-
-    <!-- Palette display names -->
-    <string name="palette_metallic">Metallic</string>
-    <string name="palette_winter">Winter</string>
-    <string name="palette_space">Space</string>
-    <string name="palette_autumn">Autumn</string>
-    <string name="palette_dark">Dark</string>
-
-    <!-- Style setting -->
-    <string name="palette_setting_name">Color Palette</string>
-    <string name="palette_setting_description">Choose one of five colour schemes for the clock rings</string>
 </resources>

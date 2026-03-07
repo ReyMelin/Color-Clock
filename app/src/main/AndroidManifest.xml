@@ -1,41 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Required for Wear OS watchface -->
     <uses-feature android:name="android.hardware.type.watch" />
-
-    <!-- Declare that this is a watch face app -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault">
+        android:supportsRtl="true">
 
-        <!-- Watch Face Service -->
-        <service
-            android:name=".ColorClockWatchFaceService"
-            android:directBootAware="true"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:permission="android.permission.BIND_WALLPAPER">
-
-            <intent-filter>
-                <action android:name="android.service.wallpaper.WallpaperService" />
-                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="com.google.android.wearable.watchface.preview"
-                android:resource="@drawable/watchface_preview" />
-
-            <meta-data
-                android:name="android.service.wallpaper"
-                android:resource="@xml/watchface" />
-
-        </service>
+        <!-- WFF version this watch face targets -->
+        <property
+            android:name="com.google.android.wearable.watchface.wffVersion"
+            android:value="2" />
 
     </application>
 

@@ -3,13 +3,31 @@
 
     <uses-feature android:name="android.hardware.type.watch" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true">
+    <application ...>
 
-        <!-- WFF version this watch face targets -->
+        <!-- This service is required for the system to 'see' the watch face -->
+        <service
+          android:name="com.google.android.wearable.watchface.WatchFaceService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WATCH_FACE">
+        
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+
+        <!-- This points to your XML file in res/raw/watchface.xml -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="androidx.wear.watchface.editor.action.WATCH_FACE_EDITOR" />
+        
+            <meta-data
+                android:name="com.google.android.wearable.watchface.xml.watchface"
+                android:resource="@raw/watchface" />
+        </service>
+
+    <!-- Keep your existing wffVersion property -->
         <property
             android:name="com.google.android.wearable.watchface.wffVersion"
             android:value="2" />

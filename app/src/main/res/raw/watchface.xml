@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Color Clock – Watch Face Format (WFF) definition
-    Design: three concentric arc rings (hours, minutes, seconds)
-    that sweep clockwise from 12‑o'clock.  Each ring has a faint
-    ghost track and a bright active sweep.  Palette: Metallic.
--->
 <WatchFace width="450" height="450">
 
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
@@ -12,68 +6,107 @@
 
     <Scene backgroundColor="#FF000000">
 
-        <!-- ==================== Background circle ==================== -->
+        <!-- Background -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Ellipse x="0" y="0" width="450" height="450">
                 <Fill color="#FF1A1A2E" />
             </Ellipse>
         </PartDraw>
 
-        <!-- ==================== Hours ring (inner) =================== -->
-        <!-- Ghost track (full circle, faint copper) -->
+        <!-- HOURS: ghost ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="298" height="298"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="298"
+                height="298"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#26B87333" thickness="32" />
             </Arc>
         </PartDraw>
-        <!-- Active sweep – grows with (hour + minute fraction) -->
+
+        <!-- HOURS: active ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="298" height="298"
-                startAngle="-90"
-                endAngle="-90 + ([HOUR_0_11] * 60 + [MINUTE]) * 0.5"
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="298"
+                height="298"
+                startAngle="0"
+                endAngle="0"
                 direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[HOUR_0_11_MINUTE] * 30" />
                 <Stroke color="#FFB87333" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- ==================== Minutes ring (middle) ================ -->
-        <!-- Ghost track (full circle, faint gold) -->
+        <!-- MINUTES: ghost ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="370" height="370"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="370"
+                height="370"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#26CFB53B" thickness="32" />
             </Arc>
         </PartDraw>
-        <!-- Active sweep – grows with (minute + second fraction) -->
+
+        <!-- MINUTES: active ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="370" height="370"
-                startAngle="-90"
-                endAngle="-90 + ([MINUTE] * 60 + [SECOND]) * 0.1"
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="370"
+                height="370"
+                startAngle="0"
+                endAngle="0"
                 direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[MINUTE_SECOND] * 6" />
                 <Stroke color="#FFCFB53B" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- ==================== Seconds ring (outer, thinner) ======== -->
-        <!-- Ghost track (full circle, faint silver) -->
+        <!-- SECONDS: ghost ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="428" height="428"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="428"
+                height="428"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#26C0C0C0" thickness="18" />
             </Arc>
         </PartDraw>
-        <!-- Active sweep – grows with seconds -->
+
+        <!-- SECONDS: active ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="428" height="428"
-                startAngle="-90"
-                endAngle="-90 + [SECOND] * 6"
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="428"
+                height="428"
+                startAngle="0"
+                endAngle="0"
                 direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[SECOND_MILLISECOND] * 6" />
                 <Stroke color="#FFC0C0C0" thickness="18" />
             </Arc>
         </PartDraw>
 
-        <!-- ==================== Center dot ========================== -->
+        <!-- Center dot -->
         <PartDraw x="221" y="221" width="8" height="8">
             <Ellipse x="0" y="0" width="8" height="8">
                 <Fill color="#FFC0C0C0" />

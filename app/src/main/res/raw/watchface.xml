@@ -13,95 +13,53 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- HOURS: ghost ring -->
+        <!-- Hours ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="298"
-                height="298"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
+            <Arc centerX="225" centerY="225" width="298" height="298"
+                startAngle="0" endAngle="360" direction="CLOCKWISE">
                 <Stroke color="#26B87333" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- HOURS: active ring -->
+        <!-- Hours active -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="298"
-                height="298"
-                startAngle="0"
-                endAngle="0"
-                direction="CLOCKWISE">
-                <Transform
-                    target="endAngle"
-                    value="[HOUR_0_11_MINUTE] * 30" />
+            <Arc centerX="225" centerY="225" width="298" height="298"
+                startAngle="0" endAngle="0" direction="CLOCKWISE">
+                <Transform target="endAngle" value="[HOUR_0_11_MINUTE] * 30" />
                 <Stroke color="#FFB87333" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- MINUTES: ghost ring -->
+        <!-- Minutes ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="370"
-                height="370"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
+            <Arc centerX="225" centerY="225" width="370" height="370"
+                startAngle="0" endAngle="360" direction="CLOCKWISE">
                 <Stroke color="#26CFB53B" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- MINUTES: active ring -->
+        <!-- Minutes active -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="370"
-                height="370"
-                startAngle="0"
-                endAngle="0"
-                direction="CLOCKWISE">
-                <Transform
-                    target="endAngle"
-                    value="[MINUTE_SECOND] * 6" />
+            <Arc centerX="225" centerY="225" width="370" height="370"
+                startAngle="0" endAngle="0" direction="CLOCKWISE">
+                <Transform target="endAngle" value="[MINUTE_SECOND] * 6" />
                 <Stroke color="#FFCFB53B" thickness="32" />
             </Arc>
         </PartDraw>
 
-        <!-- SECONDS: ghost ring -->
+        <!-- Seconds ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="428"
-                height="428"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
+            <Arc centerX="225" centerY="225" width="428" height="428"
+                startAngle="0" endAngle="360" direction="CLOCKWISE">
                 <Stroke color="#26C0C0C0" thickness="18" />
             </Arc>
         </PartDraw>
 
-        <!-- SECONDS: active ring -->
+        <!-- Seconds active -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="428"
-                height="428"
-                startAngle="0"
-                endAngle="0"
-                direction="CLOCKWISE">
-                <Transform
-                    target="endAngle"
-                    value="[SECOND_MILLISECOND] * 6" />
+            <Arc centerX="225" centerY="225" width="428" height="428"
+                startAngle="0" endAngle="0" direction="CLOCKWISE">
+                <Transform target="endAngle" value="[SECOND] * 6" />
                 <Stroke color="#FFC0C0C0" thickness="18" />
             </Arc>
         </PartDraw>

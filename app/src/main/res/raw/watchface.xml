@@ -13,24 +13,44 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- Ghost rings -->
+        <!-- Ghost hour ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="300" height="300"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="300"
+                height="300"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#221A0F08" thickness="150" />
             </Arc>
         </PartDraw>
 
+        <!-- Ghost minute ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="392" height="392"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="392"
+                height="392"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#22342E0A" thickness="60" />
             </Arc>
         </PartDraw>
 
+        <!-- Ghost second ring -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="440" height="440"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="440"
+                height="440"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
                 <Stroke color="#22383838" thickness="18" />
             </Arc>
         </PartDraw>
@@ -39,22 +59,31 @@
         <AnalogClock x="0" y="0" width="450" height="450">
 
             <HourHand
-                resource="hour_tail"
-                x="75" y="75"
-                width="300" height="300"
-                pivotX="0.5" pivotY="0.5" />
+                resource="@drawable/hour_tail"
+                x="0"
+                y="0"
+                width="450"
+                height="450"
+                pivotX="225"
+                pivotY="225" />
 
             <MinuteHand
-                resource="minute_tail"
-                x="29" y="29"
-                width="392" height="392"
-                pivotX="0.5" pivotY="0.5" />
+                resource="@drawable/minute_tail"
+                x="0"
+                y="0"
+                width="450"
+                height="450"
+                pivotX="225"
+                pivotY="225" />
 
             <SecondHand
-                resource="second_tail"
-                x="5" y="5"
-                width="440" height="440"
-                pivotX="0.5" pivotY="0.5" />
+                resource="@drawable/second_tail"
+                x="0"
+                y="0"
+                width="450"
+                height="450"
+                pivotX="225"
+                pivotY="225" />
 
         </AnalogClock>
 

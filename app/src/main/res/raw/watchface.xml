@@ -4,70 +4,129 @@
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
     <Metadata key="PREVIEW_TIME" value="10:08:32" />
 
-    <Scene backgroundColor="#FF000000">
+    <Scene backgroundColor="#FF05070C">
 
-        <!-- Background -->
+        <!-- Base background -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Ellipse x="0" y="0" width="450" height="450">
-                <Fill color="#FF1A1A2E" />
+                <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>
 
-        <!-- Hours ghost -->
+        <!-- HOURS: full center disk ghost -->
+        <PartDraw x="55" y="55" width="340" height="340">
+            <Ellipse x="0" y="0" width="340" height="340">
+                <Fill color="#221A0F08" />
+            </Ellipse>
+        </PartDraw>
+
+        <!-- HOURS: active filled sweep -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="298" height="298"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
-                <Stroke color="#26B87333" thickness="32" />
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="340"
+                height="340"
+                startAngle="0"
+                endAngle="0"
+                direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[HOUR_0_11_MINUTE] * 30" />
+                <Stroke color="#FFB87333" thickness="170">
+                    <SweepGradient
+                        centerX="225"
+                        centerY="225"
+                        startAngle="0"
+                        endAngle="360"
+                        colors="#221A0F08 #FF7A451D"
+                        positions="0 1" />
+                </Stroke>
             </Arc>
         </PartDraw>
 
-        <!-- Hours active -->
+        <!-- MINUTES: ghost band -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="298" height="298"
-                startAngle="0" endAngle="0" direction="CLOCKWISE">
-                <Transform target="endAngle" value="[HOUR_0_11_MINUTE] * 30" />
-                <Stroke color="#FFB87333" thickness="32" />
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="392"
+                height="392"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="#22CFB53B" thickness="42" />
             </Arc>
         </PartDraw>
 
-        <!-- Minutes ghost -->
+        <!-- MINUTES: active band -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="370" height="370"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
-                <Stroke color="#26CFB53B" thickness="32" />
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="392"
+                height="392"
+                startAngle="0"
+                endAngle="0"
+                direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[MINUTE_SECOND] * 6" />
+                <Stroke color="#FFCFB53B" thickness="42">
+                    <SweepGradient
+                        centerX="225"
+                        centerY="225"
+                        startAngle="0"
+                        endAngle="360"
+                        colors="#22342E0A #FFCFB53B"
+                        positions="0 1" />
+                </Stroke>
             </Arc>
         </PartDraw>
 
-        <!-- Minutes active -->
+        <!-- SECONDS: ghost rim -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="370" height="370"
-                startAngle="0" endAngle="0" direction="CLOCKWISE">
-                <Transform target="endAngle" value="[MINUTE_SECOND] * 6" />
-                <Stroke color="#FFCFB53B" thickness="32" />
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="432"
+                height="432"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="#22C0C0C0" thickness="12" />
             </Arc>
         </PartDraw>
 
-        <!-- Seconds ghost -->
+        <!-- SECONDS: active rim -->
         <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="428" height="428"
-                startAngle="0" endAngle="360" direction="CLOCKWISE">
-                <Stroke color="#26C0C0C0" thickness="18" />
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="432"
+                height="432"
+                startAngle="0"
+                endAngle="0"
+                direction="CLOCKWISE">
+                <Transform
+                    target="endAngle"
+                    value="[SECOND] * 6" />
+                <Stroke color="#FFC0C0C0" thickness="12">
+                    <SweepGradient
+                        centerX="225"
+                        centerY="225"
+                        startAngle="0"
+                        endAngle="360"
+                        colors="#22383838 #FFF0F0F0"
+                        positions="0 1" />
+                </Stroke>
             </Arc>
         </PartDraw>
 
-        <!-- Seconds active -->
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Arc centerX="225" centerY="225" width="428" height="428"
-                startAngle="0" endAngle="0" direction="CLOCKWISE">
-                <Transform target="endAngle" value="[SECOND] * 6" />
-                <Stroke color="#FFC0C0C0" thickness="18" />
-            </Arc>
-        </PartDraw>
-
-        <!-- Center dot -->
-        <PartDraw x="221" y="221" width="8" height="8">
-            <Ellipse x="0" y="0" width="8" height="8">
-                <Fill color="#FFC0C0C0" />
+        <!-- Center cap -->
+        <PartDraw x="205" y="205" width="40" height="40">
+            <Ellipse x="0" y="0" width="40" height="40">
+                <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>
 

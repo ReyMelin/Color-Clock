@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature android:name="android.hardware.type.watch" />
 
-    <application ...>
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:hasCode="false">
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
 
         <!-- This service is required for the system to 'see' the watch face -->
         <service
-          android:name="com.google.android.wearable.watchface.WatchFaceService"
+            android:name="com.google.android.wearable.watchface.WatchFaceService"
             android:exported="true"
             android:label="@string/app_name"
-            android:permission="android.permission.BIND_WATCH_FACE">
-        
+            android:permission="android.permission.BIND_WATCH_FACE"
+            tools:ignore="MissingClass">
+
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
                 <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
             </intent-filter>
 
-        <!-- This points to your XML file in res/raw/watchface.xml -->
             <meta-data
                 android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
                 android:value="androidx.wear.watchface.editor.action.WATCH_FACE_EDITOR" />
-        
+
             <meta-data
                 android:name="com.google.android.wearable.watchface.xml.watchface"
                 android:resource="@raw/watchface" />
+
+            <!-- Required for the watch face picker to see metadata -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.info"
+                android:resource="@xml/watch_face_info" />
+
         </service>
 
-    <!-- Keep your existing wffVersion property -->
+        <!-- Watch Face Format version property -->
         <property
-            android:name="com.google.android.wearable.watchface.wffVersion"
+            android:name="com.google.wear.watchface.format.version"
             android:value="2" />
 
     </application>

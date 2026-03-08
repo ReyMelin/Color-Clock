@@ -4,5 +4,6 @@
     <Category value="CATEGORY_EMPTY" />
     <AvailableInRetail value="true" />
     <MultipleInstancesAllowed value="true" />
-    <Editable value="false" />
+    <Editable value="true" />
+    <FlavorsSupported value="true" />
 </WatchFaceInfo>

@@ -55,7 +55,7 @@
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22CFB53B" thickness="42" />
+                <Stroke color="#22CFB53B" thickness="60" />
             </Arc>
         </PartDraw>
 
@@ -72,7 +72,7 @@
                 <Transform
                     target="endAngle"
                     value="[MINUTE_SECOND] * 6" />
-                <Stroke color="#FFCFB53B" thickness="42">
+                <Stroke color="#FFCFB53B" thickness="60">
                     <SweepGradient
                         centerX="225"
                         centerY="225"
@@ -83,18 +83,17 @@
                 </Stroke>
             </Arc>
         </PartDraw>
-
         <!-- SECONDS: ghost rim -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
                 centerY="225"
-                width="432"
-                height="432"
+                width="440"
+                height="440"
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22C0C0C0" thickness="12" />
+                <Stroke color="#22C0C0C0" thickness="18" />
             </Arc>
         </PartDraw>
 
@@ -103,15 +102,15 @@
             <Arc
                 centerX="225"
                 centerY="225"
-                width="432"
-                height="432"
+                width="440"
+                height="440"
                 startAngle="0"
                 endAngle="0"
                 direction="CLOCKWISE">
                 <Transform
                     target="endAngle"
                     value="[SECOND] * 6" />
-                <Stroke color="#FFC0C0C0" thickness="12">
+                <Stroke color="#FFC0C0C0" thickness="18">
                     <SweepGradient
                         centerX="225"
                         centerY="225"
@@ -122,10 +121,9 @@
                 </Stroke>
             </Arc>
         </PartDraw>
-
-        <!-- Center cap -->
-        <PartDraw x="205" y="205" width="40" height="40">
-            <Ellipse x="0" y="0" width="40" height="40">
+       <!-- Center cap -->
+        <PartDraw x="213" y="213" width="24" height="24">
+            <Ellipse x="0" y="0" width="24" height="24">
                 <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>

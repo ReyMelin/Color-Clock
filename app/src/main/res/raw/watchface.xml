@@ -4,7 +4,7 @@
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
     <Metadata key="PREVIEW_TIME" value="10:08:32" />
 
-    <Scene backgroundColor="#FF05070C">
+    <Scene backgroundColor="#FF0B1020">
 
         <!-- Base background -->
         <PartDraw x="0" y="0" width="450" height="450">
@@ -13,39 +13,49 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- HOURS: full center disk ghost -->
-        <PartDraw x="55" y="55" width="340" height="340">
-            <Ellipse x="0" y="0" width="340" height="340">
-                <Fill color="#221A0F08" />
-            </Ellipse>
-        </PartDraw>
-
-        <!-- HOURS: active filled sweep -->
+        <!-- HOURS ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
                 centerY="225"
-                width="340"
-                height="340"
+                width="300"
+                height="300"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="#221A0F08" thickness="150" />
+            </Arc>
+        </PartDraw>
+
+        <!-- HOURS active: 180-degree trail -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="300"
+                height="300"
                 startAngle="0"
                 endAngle="0"
                 direction="CLOCKWISE">
                 <Transform
+                    target="startAngle"
+                    value="[HOUR_0_11_MINUTE] * 30 - 180" />
+                <Transform
                     target="endAngle"
                     value="[HOUR_0_11_MINUTE] * 30" />
-                <Stroke color="#FFB87333" thickness="170">
+                <Stroke color="#FFB87333" thickness="150">
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="0"
-                        endAngle="360"
-                        colors="#221A0F08 #FF7A451D"
+                        startAngle="-180"
+                        endAngle="0"
+                        colors="#221A0F08 #FFB87333"
                         positions="0 1" />
                 </Stroke>
             </Arc>
         </PartDraw>
 
-        <!-- MINUTES: ghost band -->
+        <!-- MINUTES ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -55,11 +65,11 @@
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22CFB53B" thickness="60" />
+                <Stroke color="#22342E0A" thickness="60" />
             </Arc>
         </PartDraw>
 
-        <!-- MINUTES: active band -->
+        <!-- MINUTES active: 160-degree trail -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -69,6 +79,9 @@
                 startAngle="0"
                 endAngle="0"
                 direction="CLOCKWISE">
+                <Transform
+                    target="startAngle"
+                    value="[MINUTE_SECOND] * 6 - 160" />
                 <Transform
                     target="endAngle"
                     value="[MINUTE_SECOND] * 6" />
@@ -76,14 +89,15 @@
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="0"
-                        endAngle="360"
+                        startAngle="-160"
+                        endAngle="0"
                         colors="#22342E0A #FFCFB53B"
                         positions="0 1" />
                 </Stroke>
             </Arc>
         </PartDraw>
-        <!-- SECONDS: ghost rim -->
+
+        <!-- SECONDS ghost -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -93,11 +107,11 @@
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22C0C0C0" thickness="18" />
+                <Stroke color="#22383838" thickness="18" />
             </Arc>
         </PartDraw>
 
-        <!-- SECONDS: active rim -->
+        <!-- SECONDS active: 120-degree trail -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -108,20 +122,24 @@
                 endAngle="0"
                 direction="CLOCKWISE">
                 <Transform
+                    target="startAngle"
+                    value="[SECOND] * 6 - 120" />
+                <Transform
                     target="endAngle"
                     value="[SECOND] * 6" />
-                <Stroke color="#FFC0C0C0" thickness="18">
+                <Stroke color="#FFF0F0F0" thickness="18">
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="0"
-                        endAngle="360"
+                        startAngle="-120"
+                        endAngle="0"
                         colors="#22383838 #FFF0F0F0"
                         positions="0 1" />
                 </Stroke>
             </Arc>
         </PartDraw>
-       <!-- Center cap -->
+
+        <!-- Small center cap -->
         <PartDraw x="213" y="213" width="24" height="24">
             <Ellipse x="0" y="0" width="24" height="24">
                 <Fill color="#FF0B1020" />

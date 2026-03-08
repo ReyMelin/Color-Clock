@@ -27,7 +27,7 @@
             </Arc>
         </PartDraw>
 
-        <!-- HOURS active: 180-degree trail -->
+        <!-- HOURS active -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -35,11 +35,11 @@
                 width="300"
                 height="300"
                 startAngle="0"
-                endAngle="0"
+                endAngle="300"
                 direction="CLOCKWISE">
                 <Transform
                     target="startAngle"
-                    value="[HOUR_0_11_MINUTE] * 30 - 180" />
+                    value="[HOUR_0_11_MINUTE] * 30 - 300" />
                 <Transform
                     target="endAngle"
                     value="[HOUR_0_11_MINUTE] * 30" />
@@ -47,8 +47,8 @@
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="-180"
-                        endAngle="0"
+                        startAngle="0"
+                        endAngle="300"
                         colors="#221A0F08 #FFB87333"
                         positions="0 1" />
                 </Stroke>
@@ -69,7 +69,7 @@
             </Arc>
         </PartDraw>
 
-        <!-- MINUTES active: 160-degree trail -->
+        <!-- MINUTES active -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -77,11 +77,11 @@
                 width="392"
                 height="392"
                 startAngle="0"
-                endAngle="0"
+                endAngle="300"
                 direction="CLOCKWISE">
                 <Transform
                     target="startAngle"
-                    value="[MINUTE_SECOND] * 6 - 160" />
+                    value="[MINUTE_SECOND] * 6 - 300" />
                 <Transform
                     target="endAngle"
                     value="[MINUTE_SECOND] * 6" />
@@ -89,8 +89,8 @@
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="-160"
-                        endAngle="0"
+                        startAngle="0"
+                        endAngle="300"
                         colors="#22342E0A #FFCFB53B"
                         positions="0 1" />
                 </Stroke>
@@ -111,7 +111,7 @@
             </Arc>
         </PartDraw>
 
-        <!-- SECONDS active: 120-degree trail -->
+        <!-- SECONDS active -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Arc
                 centerX="225"
@@ -119,11 +119,11 @@
                 width="440"
                 height="440"
                 startAngle="0"
-                endAngle="0"
+                endAngle="180"
                 direction="CLOCKWISE">
                 <Transform
                     target="startAngle"
-                    value="[SECOND] * 6 - 120" />
+                    value="[SECOND] * 6 - 180" />
                 <Transform
                     target="endAngle"
                     value="[SECOND] * 6" />
@@ -131,8 +131,8 @@
                     <SweepGradient
                         centerX="225"
                         centerY="225"
-                        startAngle="-120"
-                        endAngle="0"
+                        startAngle="0"
+                        endAngle="180"
                         colors="#22383838 #FFF0F0F0"
                         positions="0 1" />
                 </Stroke>

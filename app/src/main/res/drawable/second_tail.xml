@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Second hand: 300° arc trail on the outer ring (diameter 440, stroke 18).
+     The bright end sits at 12 o'clock; the system rotates the drawable. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="450dp"
+    android:height="450dp"
+    android:viewportWidth="450"
+    android:viewportHeight="450">
+
+    <!-- 300° arc from 330° (tail) clockwise to 270° (hand / 12 o'clock) -->
+    <path
+        android:pathData="M415.53,115 A220,220 0 1,1 225,5"
+        android:strokeWidth="18"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="sweep"
+                android:centerX="225"
+                android:centerY="225">
+                <item android:offset="0.000" android:color="#1AC0C0C0" />
+                <item android:offset="0.250" android:color="#66C0C0C0" />
+                <item android:offset="0.500" android:color="#B3C0C0C0" />
+                <item android:offset="0.750" android:color="#FFC0C0C0" />
+                <item android:offset="0.760" android:color="#00C0C0C0" />
+                <item android:offset="0.916" android:color="#00C0C0C0" />
+                <item android:offset="1.000" android:color="#1AC0C0C0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

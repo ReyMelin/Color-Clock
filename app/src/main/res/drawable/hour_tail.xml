@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hour hand: 300° arc trail on the inner ring (diameter 300, stroke 150).
+     The bright end sits at 12 o'clock; the system rotates the drawable. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="450dp"
+    android:height="450dp"
+    android:viewportWidth="450"
+    android:viewportHeight="450">
+
+    <!-- 300° arc from 330° (tail) clockwise to 270° (hand / 12 o'clock) -->
+    <path
+        android:pathData="M354.9,150 A150,150 0 1,1 225,75"
+        android:strokeWidth="150"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="sweep"
+                android:centerX="225"
+                android:centerY="225">
+                <!-- 0° (3 o'clock) – 30° past the tail -->
+                <item android:offset="0.000" android:color="#1AB87333" />
+                <!-- 90° (6 o'clock) – 120° into the arc -->
+                <item android:offset="0.250" android:color="#66B87333" />
+                <!-- 180° (9 o'clock) – 210° into the arc -->
+                <item android:offset="0.500" android:color="#B3B87333" />
+                <!-- 270° (12 o'clock) – hand position, full bright copper -->
+                <item android:offset="0.750" android:color="#FFB87333" />
+                <!-- Immediately drop to transparent – gap region -->
+                <item android:offset="0.760" android:color="#00B87333" />
+                <!-- 330° – tail start, transparent -->
+                <item android:offset="0.916" android:color="#00B87333" />
+                <!-- 360° – wraps back to 0°, match first stop -->
+                <item android:offset="1.000" android:color="#1AB87333" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

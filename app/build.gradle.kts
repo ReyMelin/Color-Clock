@@ -20,5 +20,3 @@ android {
         }
     }
 }
-
-// No runtime dependencies – the watch face is purely declarative WFF XML.

@@ -13,48 +13,6 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- Ghost hour ring -->
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="220"
-                height="220"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
-                <Stroke color="#221A0F08" thickness="44" />
-            </Arc>
-        </PartDraw>
-
-        <!-- Ghost minute ring -->
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="320"
-                height="320"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
-                <Stroke color="#22342E0A" thickness="24" />
-            </Arc>
-        </PartDraw>
-
-        <!-- Ghost second ring -->
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Arc
-                centerX="225"
-                centerY="225"
-                width="400"
-                height="400"
-                startAngle="0"
-                endAngle="360"
-                direction="CLOCKWISE">
-                <Stroke color="#22383838" thickness="12" />
-            </Arc>
-        </PartDraw>
-
         <!-- Rotating hands -->
         <AnalogClock x="0" y="0" width="450" height="450">
 

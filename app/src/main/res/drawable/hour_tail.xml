@@ -21,9 +21,9 @@
                 android:centerX="225"
                 android:centerY="225">
                 <!-- 0° – gap region, transparent -->
-                <item android:offset="0.000" android:color="#00000000" />
+                <item android:offset="0.000" android:color="#00050810" />
                 <!-- ~59° – round cap edge (11° before path start) -->
-                <item android:offset="0.161" android:color="#00000000" />
+                <item android:offset="0.161" android:color="#00050810" />
                 <!-- 70° – path start, faintest copper -->
                 <item android:offset="0.194" android:color="#1AB87333" />
                 <!-- ~137° – one-third through visible arc -->
@@ -35,9 +35,9 @@
                 <!-- ~281° – past round cap edge at head -->
                 <item android:offset="0.781" android:color="#FFB87333" />
                 <!-- Drop to transparent after cap -->
-                <item android:offset="0.789" android:color="#00000000" />
+                <item android:offset="0.789" android:color="#00050810" />
                 <!-- 360° – gap, matches start -->
-                <item android:offset="1.000" android:color="#00000000" />
+                <item android:offset="1.000" android:color="#00050810" />
             </gradient>
         </aapt:attr>
     </path>

@@ -10,10 +10,10 @@
             displayName="@string/theme_label"
             defaultValue="0"
             screenReaderText="@string/theme_label">
-            <ListOption id="0" displayName="@string/theme_classic" screenReaderText="@string/theme_classic" />
-            <ListOption id="1" displayName="@string/theme_ocean" screenReaderText="@string/theme_ocean" />
-            <ListOption id="2" displayName="@string/theme_cherry" screenReaderText="@string/theme_cherry" />
-            <ListOption id="3" displayName="@string/theme_forest" screenReaderText="@string/theme_forest" />
+            <ListOption id="0" displayName="@string/theme_classic" screenReaderText="@string/theme_classic" icon="@drawable/theme_classic" />
+            <ListOption id="1" displayName="@string/theme_ocean" screenReaderText="@string/theme_ocean" icon="@drawable/theme_ocean" />
+            <ListOption id="2" displayName="@string/theme_cherry" screenReaderText="@string/theme_cherry" icon="@drawable/theme_cherry" />
+            <ListOption id="3" displayName="@string/theme_forest" screenReaderText="@string/theme_forest" icon="@drawable/theme_forest" />
         </ListConfiguration>
     </UserConfiguration>
 

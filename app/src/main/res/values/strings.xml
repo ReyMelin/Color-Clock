@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Color Clock</string>
+    <string name="theme_label">Theme</string>
+    <string name="theme_classic">Classic</string>
+    <string name="theme_ocean">Ocean</string>
+    <string name="theme_cherry">Cherry</string>
+    <string name="theme_forest">Forest</string>
 </resources>

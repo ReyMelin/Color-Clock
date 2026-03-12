@@ -20,27 +20,27 @@
                 android:type="sweep"
                 android:centerX="225"
                 android:centerY="225">
-                <!-- 0° – gap region, opaque background -->
-                <item android:offset="0.000" android:color="#FF0B1020" />
-                <!-- ~68° – round cap edge (2° before path start) -->
-                <item android:offset="0.189" android:color="#FF0B1020" />
+                <!-- 0° – gap region, transparent -->
+                <item android:offset="0.000" android:color="#00FFFFFF" />
+                <!-- ~68° – round cap edge -->
+                <item android:offset="0.189" android:color="#00FFFFFF" />
                 <!-- 70° – tail start, barely visible -->
-                <item android:offset="0.194" android:color="#0DC0C0C0" />
-                <item android:offset="0.264" android:color="#1FC0C0C0" />
-                <item android:offset="0.333" android:color="#33C0C0C0" />
-                <item android:offset="0.403" android:color="#4DC0C0C0" />
-                <item android:offset="0.472" android:color="#6BC0C0C0" />
-                <item android:offset="0.542" android:color="#8AC0C0C0" />
-                <item android:offset="0.611" android:color="#ABC0C0C0" />
-                <item android:offset="0.681" android:color="#CCC0C0C0" />
-                <!-- 270° – full bright silver -->
-                <item android:offset="0.750" android:color="#FFC0C0C0" />
+                <item android:offset="0.194" android:color="#0DFFFFFF" />
+                <item android:offset="0.264" android:color="#1FFFFFFF" />
+                <item android:offset="0.333" android:color="#33FFFFFF" />
+                <item android:offset="0.403" android:color="#4DFFFFFF" />
+                <item android:offset="0.472" android:color="#6BFFFFFF" />
+                <item android:offset="0.542" android:color="#8AFFFFFF" />
+                <item android:offset="0.611" android:color="#ABFFFFFF" />
+                <item android:offset="0.681" android:color="#CCFFFFFF" />
+                <!-- 270° – full brightness -->
+                <item android:offset="0.750" android:color="#FFFFFFFF" />
                 <!-- ~272° – past round cap edge at head -->
-                <item android:offset="0.755" android:color="#FFC0C0C0" />
-                <!-- Drop to background after cap -->
-                <item android:offset="0.761" android:color="#FF0B1020" />
+                <item android:offset="0.755" android:color="#FFFFFFFF" />
+                <!-- Drop to transparent after cap -->
+                <item android:offset="0.761" android:color="#00FFFFFF" />
                 <!-- 360° – gap, matches start -->
-                <item android:offset="1.000" android:color="#FF0B1020" />
+                <item android:offset="1.000" android:color="#00FFFFFF" />
             </gradient>
         </aapt:attr>
     </path>

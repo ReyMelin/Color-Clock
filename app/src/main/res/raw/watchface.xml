@@ -4,57 +4,141 @@
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
     <Metadata key="PREVIEW_TIME" value="10:08:32" />
 
-    <Scene backgroundColor="#FF0B1020">
+    <UserConfiguration>
+        <ListConfiguration
+            id="colorTheme"
+            displayName="@string/theme_label"
+            defaultValue="0"
+            screenReaderText="@string/theme_label">
+            <ListOption id="0" displayName="@string/theme_classic" screenReaderText="@string/theme_classic" />
+            <ListOption id="1" displayName="@string/theme_ocean" screenReaderText="@string/theme_ocean" />
+            <ListOption id="2" displayName="@string/theme_cherry" screenReaderText="@string/theme_cherry" />
+            <ListOption id="3" displayName="@string/theme_forest" screenReaderText="@string/theme_forest" />
+        </ListConfiguration>
+    </UserConfiguration>
 
-        <!-- Background -->
-        <PartDraw x="0" y="0" width="450" height="450">
-            <Ellipse x="0" y="0" width="450" height="450">
-                <Fill color="#FF0B1020" />
-            </Ellipse>
-        </PartDraw>
+    <Scene backgroundColor="#FF000000">
 
-        <!-- Rotating hands -->
-        <AnalogClock x="0" y="0" width="450" height="450">
+        <!-- Themed: background, hands, center cap -->
+        <Condition>
+            <Expressions>
+                <Expression name="isClassic"><![CDATA[[CONFIGURATION.colorTheme] == 0]]></Expression>
+            </Expressions>
 
-            <HourHand
-                resource="@drawable/hour_tail"
-                x="0"
-                y="0"
-                width="450"
-                height="450"
-                pivotX="0.5"
-                pivotY="0.5" />
+            <Compare expression="isClassic">
+                <!-- Classic: copper / gold / silver -->
+                <PartDraw x="0" y="0" width="450" height="450">
+                    <Ellipse x="0" y="0" width="450" height="450">
+                        <Fill color="#FF0B1020" />
+                    </Ellipse>
+                </PartDraw>
+                <AnalogClock x="0" y="0" width="450" height="450">
+                    <HourHand resource="@drawable/hour_tail" x="0" y="0" width="450" height="450"
+                        pivotX="0.5" pivotY="0.5" tintColor="#FFB87333" />
+                    <MinuteHand resource="@drawable/minute_tail" x="0" y="0" width="450" height="450"
+                        pivotX="0.5" pivotY="0.5" tintColor="#FFCFB53B" />
+                    <SecondHand resource="@drawable/second_tail" x="0" y="0" width="450" height="450"
+                        pivotX="0.5" pivotY="0.5" tintColor="#FFC0C0C0">
+                        <Sweep frequency="30" />
+                    </SecondHand>
+                </AnalogClock>
+                <PartDraw x="219" y="219" width="12" height="12">
+                    <Ellipse x="0" y="0" width="12" height="12">
+                        <Fill color="#FF0B1020" />
+                    </Ellipse>
+                </PartDraw>
+            </Compare>
 
-            <MinuteHand
-                resource="@drawable/minute_tail"
-                x="0"
-                y="0"
-                width="450"
-                height="450"
-                pivotX="0.5"
-                pivotY="0.5" />
+            <Default>
+                <Condition>
+                    <Expressions>
+                        <Expression name="isOcean"><![CDATA[[CONFIGURATION.colorTheme] == 1]]></Expression>
+                    </Expressions>
 
-            <SecondHand
-                resource="@drawable/second_tail"
-                x="0"
-                y="0"
-                width="450"
-                height="450"
-                pivotX="0.5"
-                pivotY="0.5">
-                <Sweep frequency="30" />
-            </SecondHand>
+                    <Compare expression="isOcean">
+                        <!-- Ocean: deep blue / sky blue / ice -->
+                        <PartDraw x="0" y="0" width="450" height="450">
+                            <Ellipse x="0" y="0" width="450" height="450">
+                                <Fill color="#FF081418" />
+                            </Ellipse>
+                        </PartDraw>
+                        <AnalogClock x="0" y="0" width="450" height="450">
+                            <HourHand resource="@drawable/hour_tail" x="0" y="0" width="450" height="450"
+                                pivotX="0.5" pivotY="0.5" tintColor="#FF1976D2" />
+                            <MinuteHand resource="@drawable/minute_tail" x="0" y="0" width="450" height="450"
+                                pivotX="0.5" pivotY="0.5" tintColor="#FF4FC3F7" />
+                            <SecondHand resource="@drawable/second_tail" x="0" y="0" width="450" height="450"
+                                pivotX="0.5" pivotY="0.5" tintColor="#FF80DEEA">
+                                <Sweep frequency="30" />
+                            </SecondHand>
+                        </AnalogClock>
+                        <PartDraw x="219" y="219" width="12" height="12">
+                            <Ellipse x="0" y="0" width="12" height="12">
+                                <Fill color="#FF081418" />
+                            </Ellipse>
+                        </PartDraw>
+                    </Compare>
 
-        </AnalogClock>
+                    <Default>
+                        <Condition>
+                            <Expressions>
+                                <Expression name="isCherry"><![CDATA[[CONFIGURATION.colorTheme] == 2]]></Expression>
+                            </Expressions>
 
-        <!-- Center cap -->
-        <PartDraw x="219" y="219" width="12" height="12">
-            <Ellipse x="0" y="0" width="12" height="12">
-                <Fill color="#FF0B1020" />
-            </Ellipse>
-        </PartDraw>
+                            <Compare expression="isCherry">
+                                <!-- Cherry: deep red / red / salmon -->
+                                <PartDraw x="0" y="0" width="450" height="450">
+                                    <Ellipse x="0" y="0" width="450" height="450">
+                                        <Fill color="#FF180808" />
+                                    </Ellipse>
+                                </PartDraw>
+                                <AnalogClock x="0" y="0" width="450" height="450">
+                                    <HourHand resource="@drawable/hour_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FFD32F2F" />
+                                    <MinuteHand resource="@drawable/minute_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FFEF5350" />
+                                    <SecondHand resource="@drawable/second_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FFFF8A80">
+                                        <Sweep frequency="30" />
+                                    </SecondHand>
+                                </AnalogClock>
+                                <PartDraw x="219" y="219" width="12" height="12">
+                                    <Ellipse x="0" y="0" width="12" height="12">
+                                        <Fill color="#FF180808" />
+                                    </Ellipse>
+                                </PartDraw>
+                            </Compare>
 
-        <!-- AM/PM center indicator: semicircle arc around center cap -->
+                            <Default>
+                                <!-- Forest: dark green / green / mint -->
+                                <PartDraw x="0" y="0" width="450" height="450">
+                                    <Ellipse x="0" y="0" width="450" height="450">
+                                        <Fill color="#FF0A1408" />
+                                    </Ellipse>
+                                </PartDraw>
+                                <AnalogClock x="0" y="0" width="450" height="450">
+                                    <HourHand resource="@drawable/hour_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FF388E3C" />
+                                    <MinuteHand resource="@drawable/minute_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FF66BB6A" />
+                                    <SecondHand resource="@drawable/second_tail" x="0" y="0" width="450" height="450"
+                                        pivotX="0.5" pivotY="0.5" tintColor="#FFA5D6A7">
+                                        <Sweep frequency="30" />
+                                    </SecondHand>
+                                </AnalogClock>
+                                <PartDraw x="219" y="219" width="12" height="12">
+                                    <Ellipse x="0" y="0" width="12" height="12">
+                                        <Fill color="#FF0A1408" />
+                                    </Ellipse>
+                                </PartDraw>
+                            </Default>
+                        </Condition>
+                    </Default>
+                </Condition>
+            </Default>
+        </Condition>
+
+        <!-- AM/PM center indicator -->
         <Condition>
             <Expressions>
                 <Expression name="isAM"><![CDATA[[HOUR_0_23] < 12]]></Expression>

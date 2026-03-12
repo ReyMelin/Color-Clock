@@ -4,20 +4,20 @@
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
     <Metadata key="PREVIEW_TIME" value="10:08:32" />
 
-    <Scene backgroundColor="#FF000000">
+    <UserConfiguration>
+        <ListConfiguration
+            id="colorTheme"
+            displayName="@string/theme_label"
+            defaultValue="0"
+            screenReaderText="@string/theme_label">
+            <ListOption id="0" displayName="@string/theme_classic" screenReaderText="@string/theme_classic" icon="@drawable/theme_classic" />
+            <ListOption id="1" displayName="@string/theme_ocean" screenReaderText="@string/theme_ocean" icon="@drawable/theme_ocean" />
+            <ListOption id="2" displayName="@string/theme_cherry" screenReaderText="@string/theme_cherry" icon="@drawable/theme_cherry" />
+            <ListOption id="3" displayName="@string/theme_forest" screenReaderText="@string/theme_forest" icon="@drawable/theme_forest" />
+        </ListConfiguration>
+    </UserConfiguration>
 
-        <UserConfiguration>
-            <ListConfiguration
-                id="colorTheme"
-                displayName="@string/theme_label"
-                defaultValue="0"
-                screenReaderText="@string/theme_label">
-                <ListOption id="0" displayName="@string/theme_classic" screenReaderText="@string/theme_classic" icon="@drawable/theme_classic" />
-                <ListOption id="1" displayName="@string/theme_ocean" screenReaderText="@string/theme_ocean" icon="@drawable/theme_ocean" />
-                <ListOption id="2" displayName="@string/theme_cherry" screenReaderText="@string/theme_cherry" icon="@drawable/theme_cherry" />
-                <ListOption id="3" displayName="@string/theme_forest" screenReaderText="@string/theme_forest" icon="@drawable/theme_forest" />
-            </ListConfiguration>
-        </UserConfiguration>
+    <Scene backgroundColor="#FF000000">
 
         <!-- Themed: background, hands, center cap -->
         <Condition>

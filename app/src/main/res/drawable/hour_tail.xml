@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Hour hand: 240° arc trail on the inner ring (diameter 220, stroke 44).
+<!-- Hour hand: 200° arc trail on the inner ring (diameter 220, stroke 44).
      The bright end sits at 12 o'clock; the system rotates the drawable. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
@@ -8,9 +8,9 @@
     android:viewportWidth="450"
     android:viewportHeight="450">
 
-    <!-- 240° arc from 30° (tail) clockwise to 270° (hand / 12 o'clock) -->
+    <!-- 200° arc from 70° (tail) clockwise to 270° (hand / 12 o'clock) -->
     <path
-        android:pathData="M320.26,280 A110,110 0 1,1 225,115"
+        android:pathData="M262.62,328.37 A110,110 0 1,1 225,115"
         android:strokeWidth="44"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
@@ -22,14 +22,14 @@
                 android:centerY="225">
                 <!-- 0° – gap region, transparent -->
                 <item android:offset="0.000" android:color="#00B87333" />
-                <!-- ~19° – round cap edge (11° before path start) -->
-                <item android:offset="0.047" android:color="#00B87333" />
-                <!-- 30° – path start, faintest copper -->
-                <item android:offset="0.083" android:color="#1AB87333" />
-                <!-- ~110° – one-third through visible arc -->
-                <item android:offset="0.305" android:color="#66B87333" />
-                <!-- ~190° – two-thirds through visible arc -->
-                <item android:offset="0.528" android:color="#B3B87333" />
+                <!-- ~59° – round cap edge (11° before path start) -->
+                <item android:offset="0.161" android:color="#00B87333" />
+                <!-- 70° – path start, faintest copper -->
+                <item android:offset="0.194" android:color="#1AB87333" />
+                <!-- ~137° – one-third through visible arc -->
+                <item android:offset="0.380" android:color="#66B87333" />
+                <!-- ~203° – two-thirds through visible arc -->
+                <item android:offset="0.564" android:color="#B3B87333" />
                 <!-- ~250° – reach full brightness, start plateau -->
                 <item android:offset="0.694" android:color="#FFB87333" />
                 <!-- ~281° – past round cap edge at head -->

@@ -96,36 +96,28 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- AM/PM center indicator: left dot = AM, right dot = PM -->
+        <!-- AM/PM center indicator: semicircle arc around center cap -->
         <Condition>
             <Expressions>
                 <Expression name="isAM"><![CDATA[[HOUR_0_23] < 12]]></Expression>
             </Expressions>
             <Compare expression="isAM">
                 <Condition value="1">
-                    <!-- AM: left dot bright, right dot dim -->
-                    <PartDraw x="218" y="222" width="4" height="4">
-                        <Ellipse x="0" y="0" width="4" height="4">
-                            <Fill color="#66C0C0C0" />
-                        </Ellipse>
-                    </PartDraw>
-                    <PartDraw x="228" y="222" width="4" height="4">
-                        <Ellipse x="0" y="0" width="4" height="4">
-                            <Fill color="#18C0C0C0" />
-                        </Ellipse>
+                    <!-- AM: top semicircle -->
+                    <PartDraw x="0" y="0" width="450" height="450">
+                        <Arc centerX="225" centerY="225" width="26" height="26"
+                             startAngle="180" endAngle="360" direction="CLOCKWISE">
+                            <Stroke color="#66C0C0C0" thickness="6" />
+                        </Arc>
                     </PartDraw>
                 </Condition>
                 <Default>
-                    <!-- PM: right dot bright, left dot dim -->
-                    <PartDraw x="218" y="222" width="4" height="4">
-                        <Ellipse x="0" y="0" width="4" height="4">
-                            <Fill color="#18C0C0C0" />
-                        </Ellipse>
-                    </PartDraw>
-                    <PartDraw x="228" y="222" width="4" height="4">
-                        <Ellipse x="0" y="0" width="4" height="4">
-                            <Fill color="#66C0C0C0" />
-                        </Ellipse>
+                    <!-- PM: bottom semicircle -->
+                    <PartDraw x="0" y="0" width="450" height="450">
+                        <Arc centerX="225" centerY="225" width="26" height="26"
+                             startAngle="0" endAngle="180" direction="CLOCKWISE">
+                            <Stroke color="#66C0C0C0" thickness="6" />
+                        </Arc>
                     </PartDraw>
                 </Default>
             </Compare>

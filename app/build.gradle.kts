@@ -17,10 +17,14 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles("proguard-rules.pro")
+        }
+    }
+
+    sourceSets {
+        getByName("main") {
+            java.setSrcDirs(emptyList<String>())
+            kotlin.setSrcDirs(emptyList<String>())
         }
     }
 }

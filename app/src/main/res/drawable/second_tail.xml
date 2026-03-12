@@ -22,18 +22,20 @@
                 android:centerY="225">
                 <!-- 0° – gap region, transparent -->
                 <item android:offset="0.000" android:color="#00C0C0C0" />
-                <!-- Just before tail start -->
-                <item android:offset="0.073" android:color="#00C0C0C0" />
-                <!-- 30° – tail start, faintest silver -->
+                <!-- ~28° – round cap edge (2° before path start) -->
+                <item android:offset="0.075" android:color="#00C0C0C0" />
+                <!-- 30° – path start, faintest silver -->
                 <item android:offset="0.083" android:color="#1AC0C0C0" />
                 <!-- ~110° – one-third through visible arc -->
                 <item android:offset="0.305" android:color="#66C0C0C0" />
                 <!-- ~190° – two-thirds through visible arc -->
                 <item android:offset="0.528" android:color="#B3C0C0C0" />
-                <!-- 270° (12 o'clock) – hand position, full bright silver -->
+                <!-- 270° (12 o'clock) – full bright silver -->
                 <item android:offset="0.750" android:color="#FFC0C0C0" />
-                <!-- Immediately drop to transparent – gap region -->
-                <item android:offset="0.760" android:color="#00C0C0C0" />
+                <!-- ~272° – past round cap edge at head -->
+                <item android:offset="0.755" android:color="#FFC0C0C0" />
+                <!-- Drop to transparent after cap -->
+                <item android:offset="0.761" android:color="#00C0C0C0" />
                 <!-- 360° – gap, matches start -->
                 <item android:offset="1.000" android:color="#00C0C0C0" />
             </gradient>

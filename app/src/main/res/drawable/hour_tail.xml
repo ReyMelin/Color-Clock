@@ -30,7 +30,9 @@
                 <item android:offset="0.305" android:color="#66B87333" />
                 <!-- ~190° – two-thirds through visible arc -->
                 <item android:offset="0.528" android:color="#B3B87333" />
-                <!-- 270° (12 o'clock) – hand position, full bright copper -->
+                <!-- ~250° – reach full brightness, start plateau -->
+                <item android:offset="0.694" android:color="#FFB87333" />
+                <!-- 270° (12 o'clock) – maintain full bright copper -->
                 <item android:offset="0.750" android:color="#FFB87333" />
                 <!-- Immediately drop to transparent – gap region -->
                 <item android:offset="0.760" android:color="#00B87333" />
@@ -39,4 +41,9 @@
             </gradient>
         </aapt:attr>
     </path>
+
+    <!-- Tip circle at 12 o'clock leading edge -->
+    <path
+        android:pathData="M215,115 A10,10 0 1,1 235,115 A10,10 0 1,1 215,115"
+        android:fillColor="#FFB87333" />
 </vector>

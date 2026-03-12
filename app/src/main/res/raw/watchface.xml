@@ -4,12 +4,12 @@
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
     <Metadata key="PREVIEW_TIME" value="10:08:32" />
 
-    <Scene backgroundColor="#FF050810">
+    <Scene backgroundColor="#FF0B1020">
 
         <!-- Background -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Ellipse x="0" y="0" width="450" height="450">
-                <Fill color="#FF050810" />
+                <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>
 
@@ -92,7 +92,7 @@
         <!-- Center cap -->
         <PartDraw x="219" y="219" width="12" height="12">
             <Ellipse x="0" y="0" width="12" height="12">
-                <Fill color="#FF050810" />
+                <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>
 

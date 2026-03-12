@@ -20,10 +20,10 @@
                 android:type="sweep"
                 android:centerX="225"
                 android:centerY="225">
-                <!-- 0° – gap region, transparent -->
-                <item android:offset="0.000" android:color="#00050810" />
+                <!-- 0° – gap region, opaque background -->
+                <item android:offset="0.000" android:color="#FF0B1020" />
                 <!-- ~66° – round cap edge (4° before path start) -->
-                <item android:offset="0.183" android:color="#00050810" />
+                <item android:offset="0.183" android:color="#FF0B1020" />
                 <!-- 70° – path start, faintest gold -->
                 <item android:offset="0.194" android:color="#1ACFB53B" />
                 <!-- ~137° – one-third through visible arc -->
@@ -34,10 +34,10 @@
                 <item android:offset="0.694" android:color="#FFCFB53B" />
                 <!-- ~274° – past round cap edge at head -->
                 <item android:offset="0.762" android:color="#FFCFB53B" />
-                <!-- Drop to transparent after cap -->
-                <item android:offset="0.770" android:color="#00050810" />
+                <!-- Drop to background after cap -->
+                <item android:offset="0.770" android:color="#FF0B1020" />
                 <!-- 360° – gap, matches start -->
-                <item android:offset="1.000" android:color="#00050810" />
+                <item android:offset="1.000" android:color="#FF0B1020" />
             </gradient>
         </aapt:attr>
     </path>

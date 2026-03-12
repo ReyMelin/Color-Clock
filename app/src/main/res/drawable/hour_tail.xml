@@ -24,13 +24,16 @@
                 <item android:offset="0.000" android:color="#FF0B1020" />
                 <!-- ~59° – round cap edge (11° before path start) -->
                 <item android:offset="0.161" android:color="#FF0B1020" />
-                <!-- 70° – path start, faintest copper -->
-                <item android:offset="0.194" android:color="#1AB87333" />
-                <!-- ~137° – one-third through visible arc -->
-                <item android:offset="0.380" android:color="#66B87333" />
-                <!-- ~203° – two-thirds through visible arc -->
-                <item android:offset="0.564" android:color="#B3B87333" />
-                <!-- ~250° – reach full brightness, start plateau -->
+                <!-- 70° – tail start, barely visible -->
+                <item android:offset="0.194" android:color="#0DB87333" />
+                <item android:offset="0.257" android:color="#1FB87333" />
+                <item android:offset="0.319" android:color="#33B87333" />
+                <item android:offset="0.382" android:color="#4DB87333" />
+                <item android:offset="0.444" android:color="#6BB87333" />
+                <item android:offset="0.507" android:color="#8AB87333" />
+                <item android:offset="0.569" android:color="#ABB87333" />
+                <item android:offset="0.632" android:color="#CCB87333" />
+                <!-- ~250° – full brightness -->
                 <item android:offset="0.694" android:color="#FFB87333" />
                 <!-- ~281° – past round cap edge at head -->
                 <item android:offset="0.781" android:color="#FFB87333" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Second hand: 300° arc trail on the outer ring (diameter 400, stroke 12).
+<!-- Second hand: 240° arc trail on the outer ring (diameter 400, stroke 12).
      The bright end sits at 12 o'clock; the system rotates the drawable. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
@@ -8,9 +8,9 @@
     android:viewportWidth="450"
     android:viewportHeight="450">
 
-    <!-- 300° arc from 330° (tail) clockwise to 270° (hand / 12 o'clock) -->
+    <!-- 240° arc from 30° (tail) clockwise to 270° (hand / 12 o'clock) -->
     <path
-        android:pathData="M398.21,125 A200,200 0 1,1 225,25"
+        android:pathData="M398.21,325 A200,200 0 1,1 225,25"
         android:strokeWidth="12"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
@@ -20,13 +20,22 @@
                 android:type="sweep"
                 android:centerX="225"
                 android:centerY="225">
-                <item android:offset="0.000" android:color="#1AC0C0C0" />
-                <item android:offset="0.250" android:color="#66C0C0C0" />
-                <item android:offset="0.500" android:color="#B3C0C0C0" />
+                <!-- 0° – gap region, transparent -->
+                <item android:offset="0.000" android:color="#00C0C0C0" />
+                <!-- Just before tail start -->
+                <item android:offset="0.073" android:color="#00C0C0C0" />
+                <!-- 30° – tail start, faintest silver -->
+                <item android:offset="0.083" android:color="#1AC0C0C0" />
+                <!-- ~110° – one-third through visible arc -->
+                <item android:offset="0.305" android:color="#66C0C0C0" />
+                <!-- ~190° – two-thirds through visible arc -->
+                <item android:offset="0.528" android:color="#B3C0C0C0" />
+                <!-- 270° (12 o'clock) – hand position, full bright silver -->
                 <item android:offset="0.750" android:color="#FFC0C0C0" />
+                <!-- Immediately drop to transparent – gap region -->
                 <item android:offset="0.760" android:color="#00C0C0C0" />
-                <item android:offset="0.916" android:color="#00C0C0C0" />
-                <item android:offset="1.000" android:color="#1AC0C0C0" />
+                <!-- 360° – gap, matches start -->
+                <item android:offset="1.000" android:color="#00C0C0C0" />
             </gradient>
         </aapt:attr>
     </path>

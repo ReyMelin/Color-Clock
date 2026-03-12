@@ -96,5 +96,40 @@
             </Ellipse>
         </PartDraw>
 
+        <!-- AM/PM center indicator -->
+        <Condition>
+            <Expressions>
+                <Expression name="isAM"><![CDATA[[HOUR_0_23] < 12]]></Expression>
+            </Expressions>
+            <Compare expression="isAM">
+                <Condition value="1">
+                    <!-- AM: left half highlighted -->
+                    <PartDraw x="0" y="0" width="450" height="450">
+                        <Arc centerX="225" centerY="225" width="10" height="10"
+                             startAngle="180" endAngle="360" direction="CLOCKWISE">
+                            <Fill color="#55C0C0C0" />
+                        </Arc>
+                        <Arc centerX="225" centerY="225" width="10" height="10"
+                             startAngle="0" endAngle="180" direction="CLOCKWISE">
+                            <Fill color="#18C0C0C0" />
+                        </Arc>
+                    </PartDraw>
+                </Condition>
+                <Default>
+                    <!-- PM: right half highlighted -->
+                    <PartDraw x="0" y="0" width="450" height="450">
+                        <Arc centerX="225" centerY="225" width="10" height="10"
+                             startAngle="180" endAngle="360" direction="CLOCKWISE">
+                            <Fill color="#18C0C0C0" />
+                        </Arc>
+                        <Arc centerX="225" centerY="225" width="10" height="10"
+                             startAngle="0" endAngle="180" direction="CLOCKWISE">
+                            <Fill color="#55C0C0C0" />
+                        </Arc>
+                    </PartDraw>
+                </Default>
+            </Compare>
+        </Condition>
+
     </Scene>
 </WatchFace>

@@ -11,7 +11,7 @@
 
         <property
             android:name="com.google.wear.watchface.format.version"
-            android:value="2" />
+            android:value="3" />
 
         <meta-data
             android:name="com.google.android.wearable.standalone"
@@ -36,6 +36,14 @@
             <meta-data
                 android:name="android.service.wallpaper"
                 android:resource="@xml/watch_face" />
+
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.google.android.wearable.watchface.category.WATCH_FACE_CONFIGURATION" />
+
+            <meta-data
+                android:name="com.google.android.wearable.watchface.xmlSchemaVersion"
+                android:resource="@xml/watch_face_info" />
         </service>
 
     </application>

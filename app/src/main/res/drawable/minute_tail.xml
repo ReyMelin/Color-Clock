@@ -42,8 +42,8 @@
         </aapt:attr>
     </path>
 
-    <!-- Tip circle at 12 o'clock leading edge -->
+    <!-- Tip circle at 12 o'clock leading edge (diameter = stroke 24) -->
     <path
-        android:pathData="M219,65 A6,6 0 1,1 231,65 A6,6 0 1,1 219,65"
+        android:pathData="M213,65 A12,12 0 1,1 237,65 A12,12 0 1,1 213,65"
         android:fillColor="#FFCFB53B" />
 </vector>

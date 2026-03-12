@@ -13,6 +13,7 @@
         android:pathData="M354.9,150 A150,150 0 1,1 225,75"
         android:strokeWidth="150"
         android:strokeLineCap="round"
+        android:strokeLineJoin="round"
         android:fillColor="#00000000">
         <aapt:attr name="android:strokeColor">
             <gradient

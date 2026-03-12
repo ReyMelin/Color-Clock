@@ -64,8 +64,8 @@
                 y="0"
                 width="450"
                 height="450"
-                pivotX="225"
-                pivotY="225" />
+                pivotX="0.5"
+                pivotY="0.5" />
 
             <MinuteHand
                 resource="@drawable/minute_tail"
@@ -73,8 +73,8 @@
                 y="0"
                 width="450"
                 height="450"
-                pivotX="225"
-                pivotY="225" />
+                pivotX="0.5"
+                pivotY="0.5" />
 
             <SecondHand
                 resource="@drawable/second_tail"
@@ -82,8 +82,10 @@
                 y="0"
                 width="450"
                 height="450"
-                pivotX="225"
-                pivotY="225" />
+                pivotX="0.5"
+                pivotY="0.5">
+                <Sweep frequency="30" />
+            </SecondHand>
 
         </AnalogClock>
 

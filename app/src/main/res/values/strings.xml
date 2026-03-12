@@ -6,4 +6,5 @@
     <string name="theme_ocean">Ocean</string>
     <string name="theme_cherry">Cherry</string>
     <string name="theme_forest">Forest</string>
+    <string name="theme_dark">Dark</string>
 </resources>

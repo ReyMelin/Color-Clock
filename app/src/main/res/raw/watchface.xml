@@ -38,6 +38,13 @@
                 screenReaderText="@string/theme_forest"
                 icon="@drawable/theme_forest"
                 colors="#FF388E3C #FF66BB6A #FFA5D6A7 #FF0A1408" />
+            <!-- Dark: charcoal / grey / silver on near-black -->
+            <ColorOption
+                id="theme_dark_hour"
+                displayName="@string/theme_dark"
+                screenReaderText="@string/theme_dark"
+                icon="@drawable/theme_dark"
+                colors="#FF616161 #FF9E9E9E #FFBDBDBD #FF0A0A0A" />
         </ColorConfiguration>
     </UserConfigurations>
 

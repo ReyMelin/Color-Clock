@@ -18,12 +18,12 @@
             <Arc
                 centerX="225"
                 centerY="225"
-                width="300"
-                height="300"
+                width="220"
+                height="220"
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#221A0F08" thickness="150" />
+                <Stroke color="#221A0F08" thickness="44" />
             </Arc>
         </PartDraw>
 
@@ -32,12 +32,12 @@
             <Arc
                 centerX="225"
                 centerY="225"
-                width="392"
-                height="392"
+                width="320"
+                height="320"
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22342E0A" thickness="60" />
+                <Stroke color="#22342E0A" thickness="24" />
             </Arc>
         </PartDraw>
 
@@ -46,12 +46,12 @@
             <Arc
                 centerX="225"
                 centerY="225"
-                width="440"
-                height="440"
+                width="400"
+                height="400"
                 startAngle="0"
                 endAngle="360"
                 direction="CLOCKWISE">
-                <Stroke color="#22383838" thickness="18" />
+                <Stroke color="#22383838" thickness="12" />
             </Arc>
         </PartDraw>
 
@@ -90,8 +90,8 @@
         </AnalogClock>
 
         <!-- Center cap -->
-        <PartDraw x="213" y="213" width="24" height="24">
-            <Ellipse x="0" y="0" width="24" height="24">
+        <PartDraw x="219" y="219" width="12" height="12">
+            <Ellipse x="0" y="0" width="12" height="12">
                 <Fill color="#FF0B1020" />
             </Ellipse>
         </PartDraw>

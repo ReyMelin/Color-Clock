@@ -96,36 +96,36 @@
             </Ellipse>
         </PartDraw>
 
-        <!-- AM/PM center indicator -->
+        <!-- AM/PM center indicator: left dot = AM, right dot = PM -->
         <Condition>
             <Expressions>
                 <Expression name="isAM"><![CDATA[[HOUR_0_23] < 12]]></Expression>
             </Expressions>
             <Compare expression="isAM">
                 <Condition value="1">
-                    <!-- AM: left half highlighted -->
-                    <PartDraw x="0" y="0" width="450" height="450">
-                        <Arc centerX="225" centerY="225" width="10" height="10"
-                             startAngle="180" endAngle="360" direction="CLOCKWISE">
-                            <Fill color="#55C0C0C0" />
-                        </Arc>
-                        <Arc centerX="225" centerY="225" width="10" height="10"
-                             startAngle="0" endAngle="180" direction="CLOCKWISE">
+                    <!-- AM: left dot bright, right dot dim -->
+                    <PartDraw x="218" y="222" width="4" height="4">
+                        <Ellipse x="0" y="0" width="4" height="4">
+                            <Fill color="#66C0C0C0" />
+                        </Ellipse>
+                    </PartDraw>
+                    <PartDraw x="228" y="222" width="4" height="4">
+                        <Ellipse x="0" y="0" width="4" height="4">
                             <Fill color="#18C0C0C0" />
-                        </Arc>
+                        </Ellipse>
                     </PartDraw>
                 </Condition>
                 <Default>
-                    <!-- PM: right half highlighted -->
-                    <PartDraw x="0" y="0" width="450" height="450">
-                        <Arc centerX="225" centerY="225" width="10" height="10"
-                             startAngle="180" endAngle="360" direction="CLOCKWISE">
+                    <!-- PM: right dot bright, left dot dim -->
+                    <PartDraw x="218" y="222" width="4" height="4">
+                        <Ellipse x="0" y="0" width="4" height="4">
                             <Fill color="#18C0C0C0" />
-                        </Arc>
-                        <Arc centerX="225" centerY="225" width="10" height="10"
-                             startAngle="0" endAngle="180" direction="CLOCKWISE">
-                            <Fill color="#55C0C0C0" />
-                        </Arc>
+                        </Ellipse>
+                    </PartDraw>
+                    <PartDraw x="228" y="222" width="4" height="4">
+                        <Ellipse x="0" y="0" width="4" height="4">
+                            <Fill color="#66C0C0C0" />
+                        </Ellipse>
                     </PartDraw>
                 </Default>
             </Compare>

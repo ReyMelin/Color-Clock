@@ -107,11 +107,11 @@
                     <!-- AM: left bright, right dim -->
                     <Arc centerX="225" centerY="225" width="30" height="30"
                          startAngle="180" endAngle="360" direction="CLOCKWISE">
-                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
+                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
                     </Arc>
                     <Arc centerX="225" centerY="225" width="30" height="30"
                          startAngle="0" endAngle="180" direction="CLOCKWISE">
-                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
+                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
                     </Arc>
                 </PartDraw>
             </Compare>
@@ -121,11 +121,11 @@
                     <!-- PM: left dim, right bright -->
                     <Arc centerX="225" centerY="225" width="30" height="30"
                          startAngle="180" endAngle="360" direction="CLOCKWISE">
-                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
+                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
                     </Arc>
                     <Arc centerX="225" centerY="225" width="30" height="30"
                          startAngle="0" endAngle="180" direction="CLOCKWISE">
-                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
+                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
                     </Arc>
                 </PartDraw>
             </Default>

@@ -88,7 +88,7 @@
                     android:centerY="225">
                     <item android:offset="0.000" android:color="#00CFB53B" />
                     <item android:offset="0.183" android:color="#00CFB53B" />
-                    <item android:offset="0.194" android:color="#0DCF B53B" />
+                    <item android:offset="0.194" android:color="#0DCFB53B" />
                     <item android:offset="0.257" android:color="#1FCFB53B" />
                     <item android:offset="0.319" android:color="#33CFB53B" />
                     <item android:offset="0.382" android:color="#4DCFB53B" />

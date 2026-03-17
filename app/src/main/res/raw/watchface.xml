@@ -14,45 +14,91 @@
                 id="theme_classic"
                 displayName="@string/theme_classic"
                 screenReaderText="@string/theme_classic"
-                icon="theme_classic"
-                colors="#FFB87333 #FFCFB53B #FFC0C0C0 #FF0B1020" />
+                icon="@drawable/theme_classic"
+                colors="#FFB87333 #FFCFB53B #FFC0C0C0 #FF0B1020 #221A0F08 #22342E0A #22383838" />
             <ColorOption
                 id="theme_ocean"
                 displayName="@string/theme_ocean"
                 screenReaderText="@string/theme_ocean"
-                icon="theme_ocean"
-                colors="#FF1976D2 #FF4FC3F7 #FF80DEEA #FF081418" />
+                icon="@drawable/theme_ocean"
+                colors="#FF1976D2 #FF4FC3F7 #FF80DEEA #FF081418 #22101E2D #22203B46 #22303D40" />
             <ColorOption
                 id="theme_cherry"
                 displayName="@string/theme_cherry"
                 screenReaderText="@string/theme_cherry"
-                icon="theme_cherry"
-                colors="#FFD32F2F #FFEF5350 #FFFF8A80 #FF180808" />
+                icon="@drawable/theme_cherry"
+                colors="#FFD32F2F #FFEF5350 #FFFF8A80 #FF180808 #22220A0A #22361616 #223F2E2B" />
             <ColorOption
                 id="theme_forest"
                 displayName="@string/theme_forest"
                 screenReaderText="@string/theme_forest"
-                icon="theme_forest"
-                colors="#FF388E3C #FF66BB6A #FFA5D6A7 #FF0A1408" />
+                icon="@drawable/theme_forest"
+                colors="#FF388E3C #FF66BB6A #FFA5D6A7 #FF0A1408 #220B160C #221A2C18 #22293B2C" />
             <ColorOption
                 id="theme_dark"
                 displayName="@string/theme_dark"
                 screenReaderText="@string/theme_dark"
-                icon="theme_dark"
-                colors="#FF616161 #FF9E9E9E #FFBDBDBD #FF0A0A0A" />
+                icon="@drawable/theme_dark"
+                colors="#FF616161 #FF9E9E9E #FFBDBDBD #FF0A0A0A #22202020 #22323232 #22424242" />
         </ColorConfiguration>
     </UserConfigurations>
 
     <Scene backgroundColor="[CONFIGURATION.colorTheme.3]">
+
+        <!-- Background -->
         <PartDraw x="0" y="0" width="450" height="450">
             <Ellipse x="0" y="0" width="450" height="450">
                 <Fill color="[CONFIGURATION.colorTheme.3]" />
             </Ellipse>
         </PartDraw>
 
+        <!-- Ghost hour ring -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="220"
+                height="220"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="[CONFIGURATION.colorTheme.4]" thickness="44" />
+            </Arc>
+        </PartDraw>
+
+        <!-- Ghost minute ring -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="320"
+                height="320"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="[CONFIGURATION.colorTheme.5]" thickness="24" />
+            </Arc>
+        </PartDraw>
+
+        <!-- Ghost second ring -->
+        <PartDraw x="0" y="0" width="450" height="450">
+            <Arc
+                centerX="225"
+                centerY="225"
+                width="400"
+                height="400"
+                startAngle="0"
+                endAngle="360"
+                direction="CLOCKWISE">
+                <Stroke color="[CONFIGURATION.colorTheme.6]" thickness="12" />
+            </Arc>
+        </PartDraw>
+
+        <!-- Rotating hands -->
         <AnalogClock x="0" y="0" width="450" height="450">
+
             <HourHand
-                resource="hour_tail"
+                resource="@drawable/hour_tail"
                 x="0"
                 y="0"
                 width="450"
@@ -60,8 +106,9 @@
                 pivotX="0.5"
                 pivotY="0.5"
                 tintColor="[CONFIGURATION.colorTheme.0]" />
+
             <MinuteHand
-                resource="minute_tail"
+                resource="@drawable/minute_tail"
                 x="0"
                 y="0"
                 width="450"
@@ -69,8 +116,9 @@
                 pivotX="0.5"
                 pivotY="0.5"
                 tintColor="[CONFIGURATION.colorTheme.1]" />
+
             <SecondHand
-                resource="second_tail"
+                resource="@drawable/second_tail"
                 x="0"
                 y="0"
                 width="450"
@@ -80,13 +128,50 @@
                 tintColor="[CONFIGURATION.colorTheme.2]">
                 <Sweep frequency="30" />
             </SecondHand>
+
         </AnalogClock>
 
+        <!-- Center cap -->
         <PartDraw x="219" y="219" width="12" height="12">
             <Ellipse x="0" y="0" width="12" height="12">
-                <Fill color="[CONFIGURATION.colorTheme.2]" />
+                <Fill color="[CONFIGURATION.colorTheme.3]" />
             </Ellipse>
         </PartDraw>
-    </Scene>
 
+        <!-- AM/PM center indicator: semicircle arc around center cap -->
+        <Condition>
+            <Expressions>
+                <Expression name="isAM"><![CDATA[[HOUR_0_23] < 12]]></Expression>
+            </Expressions>
+
+            <Compare expression="isAM">
+                <PartDraw x="0" y="0" width="450" height="450">
+                    <!-- AM: left bright, right dim -->
+                    <Arc centerX="225" centerY="225" width="30" height="30"
+                         startAngle="180" endAngle="360" direction="CLOCKWISE">
+                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
+                    </Arc>
+                    <Arc centerX="225" centerY="225" width="30" height="30"
+                         startAngle="0" endAngle="180" direction="CLOCKWISE">
+                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+            </Compare>
+
+            <Default>
+                <PartDraw x="0" y="0" width="450" height="450">
+                    <!-- PM: left dim, right bright -->
+                    <Arc centerX="225" centerY="225" width="30" height="30"
+                         startAngle="180" endAngle="360" direction="CLOCKWISE">
+                        <Stroke color="#66C0C0C0" thickness="5" cap="ROUND" />
+                    </Arc>
+                    <Arc centerX="225" centerY="225" width="30" height="30"
+                         startAngle="0" endAngle="180" direction="CLOCKWISE">
+                        <Stroke color="#18C0C0C0" thickness="5" cap="ROUND" />
+                    </Arc>
+                </PartDraw>
+            </Default>
+        </Condition>
+
+    </Scene>
 </WatchFace>

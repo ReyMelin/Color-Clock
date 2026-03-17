@@ -10,21 +10,13 @@ android {
         applicationId = "com.colorclock.watchface"
         minSdk = 33
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 7
+        versionName = "1.7.0"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            proguardFiles("proguard-rules.pro")
-        }
-    }
-
-    sourceSets {
-        getByName("main") {
-            java.setSrcDirs(emptyList<String>())
-            kotlin.setSrcDirs(emptyList<String>())
+            isMinifyEnabled = false
         }
     }
 }

@@ -1,44 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Watchface preview image shown in the watch face picker.
-     This is a vector approximation – three concentric arc rings
-     with a dark background, using the Metallic palette colours. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="320dp"
-    android:height="320dp"
-    android:viewportWidth="320"
-    android:viewportHeight="320">
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="450dp"
+    android:height="450dp"
+    android:viewportWidth="450"
+    android:viewportHeight="450">
 
-    <!-- Background circle -->
+    <!-- Background -->
     <path
-        android:fillColor="#1A1A2E"
-        android:pathData="M160,160m-160,0a160,160 0,1,1 320,0a160,160 0,1,1 -320,0" />
+        android:fillColor="#FF0B1020"
+        android:pathData="M225,225m-225,0a225,225 0,1,1 450,0a225,225 0,1,1 -450,0" />
 
-    <!-- Hours ring (inner, copper) -->
+    <!-- Ghost hour ring -->
     <path
-        android:strokeColor="#B87333"
-        android:strokeWidth="20"
+        android:strokeColor="#221A0F08"
+        android:strokeWidth="44"
         android:fillColor="#00000000"
-        android:pathData="M160,160m-55,0a55,55 0,1,1 110,0a55,55 0,1,1 -110,0"
-        android:trimPathEnd="0.35" />
+        android:pathData="M335,225m-110,0a110,110 0,1,1 -220,0a110,110 0,1,1 220,0" />
 
-    <!-- Minutes ring (middle, gold) -->
+    <!-- Ghost minute ring -->
     <path
-        android:strokeColor="#CFB53B"
-        android:strokeWidth="20"
+        android:strokeColor="#22342E0A"
+        android:strokeWidth="24"
         android:fillColor="#00000000"
-        android:pathData="M160,160m-85,0a85,85 0,1,1 170,0a85,85 0,1,1 -170,0"
-        android:trimPathEnd="0.58" />
+        android:pathData="M385,225m-160,0a160,160 0,1,1 -320,0a160,160 0,1,1 320,0" />
 
-    <!-- Seconds ring (outer, silver) – thinner -->
+    <!-- Ghost second ring -->
     <path
-        android:strokeColor="#C0C0C0"
-        android:strokeWidth="10"
+        android:strokeColor="#22383838"
+        android:strokeWidth="12"
         android:fillColor="#00000000"
-        android:pathData="M160,160m-115,0a115,115 0,1,1 230,0a115,115 0,1,1 -230,0"
-        android:trimPathEnd="0.75" />
+        android:pathData="M425,225m-200,0a200,200 0,1,1 -400,0a200,200 0,1,1 400,0" />
 
-    <!-- Center dot -->
+    <!-- Hour tail at 10:08 -->
+    <group
+        android:pivotX="225"
+        android:pivotY="225"
+        android:rotation="304.267">
+        <path
+            android:pathData="M262.62,328.37 A110,110 0 1,1 225,115"
+            android:strokeWidth="44"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="#00000000">
+            <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="sweep"
+                    android:centerX="225"
+                    android:centerY="225">
+                    <item android:offset="0.000" android:color="#00B87333" />
+                    <item android:offset="0.161" android:color="#00B87333" />
+                    <item android:offset="0.194" android:color="#0DB87333" />
+                    <item android:offset="0.257" android:color="#1FB87333" />
+                    <item android:offset="0.319" android:color="#33B87333" />
+                    <item android:offset="0.382" android:color="#4DB87333" />
+                    <item android:offset="0.444" android:color="#6BB87333" />
+                    <item android:offset="0.507" android:color="#8AB87333" />
+                    <item android:offset="0.569" android:color="#ABB87333" />
+                    <item android:offset="0.632" android:color="#CCB87333" />
+                    <item android:offset="0.694" android:color="#FFB87333" />
+                    <item android:offset="0.781" android:color="#FFB87333" />
+                    <item android:offset="0.789" android:color="#00B87333" />
+                    <item android:offset="1.000" android:color="#00B87333" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path
+            android:pathData="M203,115 A22,22 0 1,1 247,115 A22,22 0 1,1 203,115"
+            android:fillColor="#FFB87333" />
+    </group>
+
+    <!-- Minute tail at 08:32 -->
+    <group
+        android:pivotX="225"
+        android:pivotY="225"
+        android:rotation="51.2">
+        <path
+            android:pathData="M279.72,375.35 A160,160 0 1,1 225,65"
+            android:strokeWidth="24"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="#00000000">
+            <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="sweep"
+                    android:centerX="225"
+                    android:centerY="225">
+                    <item android:offset="0.000" android:color="#00CFB53B" />
+                    <item android:offset="0.183" android:color="#00CFB53B" />
+                    <item android:offset="0.194" android:color="#0DCF B53B" />
+                    <item android:offset="0.257" android:color="#1FCFB53B" />
+                    <item android:offset="0.319" android:color="#33CFB53B" />
+                    <item android:offset="0.382" android:color="#4DCFB53B" />
+                    <item android:offset="0.444" android:color="#6BCFB53B" />
+                    <item android:offset="0.507" android:color="#8ACFB53B" />
+                    <item android:offset="0.569" android:color="#ABCFB53B" />
+                    <item android:offset="0.632" android:color="#CCCFB53B" />
+                    <item android:offset="0.694" android:color="#FFCFB53B" />
+                    <item android:offset="0.762" android:color="#FFCFB53B" />
+                    <item android:offset="0.770" android:color="#00CFB53B" />
+                    <item android:offset="1.000" android:color="#00CFB53B" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path
+            android:pathData="M213,65 A12,12 0 1,1 237,65 A12,12 0 1,1 213,65"
+            android:fillColor="#FFCFB53B" />
+    </group>
+
+    <!-- Second tail at 32s -->
+    <group
+        android:pivotX="225"
+        android:pivotY="225"
+        android:rotation="192">
+        <path
+            android:pathData="M293.40,412.94 A200,200 0 1,1 225,25"
+            android:strokeWidth="12"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="#00000000">
+            <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="sweep"
+                    android:centerX="225"
+                    android:centerY="225">
+                    <item android:offset="0.000" android:color="#00C0C0C0" />
+                    <item android:offset="0.189" android:color="#00C0C0C0" />
+                    <item android:offset="0.194" android:color="#0DC0C0C0" />
+                    <item android:offset="0.264" android:color="#1FC0C0C0" />
+                    <item android:offset="0.333" android:color="#33C0C0C0" />
+                    <item android:offset="0.403" android:color="#4DC0C0C0" />
+                    <item android:offset="0.472" android:color="#6BC0C0C0" />
+                    <item android:offset="0.542" android:color="#8AC0C0C0" />
+                    <item android:offset="0.611" android:color="#ABC0C0C0" />
+                    <item android:offset="0.681" android:color="#CCC0C0C0" />
+                    <item android:offset="0.750" android:color="#FFC0C0C0" />
+                    <item android:offset="0.755" android:color="#FFC0C0C0" />
+                    <item android:offset="0.761" android:color="#00C0C0C0" />
+                    <item android:offset="1.000" android:color="#00C0C0C0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+
+    <!-- Center cap -->
     <path
-        android:fillColor="#C0C0C0"
-        android:pathData="M160,160m-4,0a4,4 0,1,1 8,0a4,4 0,1,1 -8,0" />
+        android:fillColor="#FF0B1020"
+        android:pathData="M225,225m-6,0a6,6 0,1,1 12,0a6,6 0,1,1 -12,0" />
+
+    <!-- AM indicator for 10:08:32 -->
+    <path
+        android:strokeColor="#18C0C0C0"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M210,225a15,15 0,0,1 30,0" />
+    <path
+        android:strokeColor="#66C0C0C0"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M240,225a15,15 0,0,1 -30,0" />
+
 </vector>

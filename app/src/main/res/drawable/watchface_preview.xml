@@ -11,27 +11,6 @@
         android:fillColor="#FF0B1020"
         android:pathData="M225,225m-225,0a225,225 0,1,1 450,0a225,225 0,1,1 -450,0" />
 
-    <!-- Ghost hour ring -->
-    <path
-        android:strokeColor="#221A0F08"
-        android:strokeWidth="44"
-        android:fillColor="#00000000"
-        android:pathData="M335,225m-110,0a110,110 0,1,1 -220,0a110,110 0,1,1 220,0" />
-
-    <!-- Ghost minute ring -->
-    <path
-        android:strokeColor="#22342E0A"
-        android:strokeWidth="24"
-        android:fillColor="#00000000"
-        android:pathData="M385,225m-160,0a160,160 0,1,1 -320,0a160,160 0,1,1 320,0" />
-
-    <!-- Ghost second ring -->
-    <path
-        android:strokeColor="#22383838"
-        android:strokeWidth="12"
-        android:fillColor="#00000000"
-        android:pathData="M425,225m-200,0a200,200 0,1,1 -400,0a200,200 0,1,1 400,0" />
-
     <!-- Hour tail at 10:08 -->
     <group
         android:pivotX="225"
